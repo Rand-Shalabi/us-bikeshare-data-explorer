@@ -123,17 +123,20 @@ def trip_duration_stats(df):
     # display total travel time
     travel_time = df['End Time'] - df['Start Time']
     total_time = travel_time.sum()
-    print(f"Total travel time = {total_time.days} days",
-    f"{total_time.seconds // 3600} hours {total_time.seconds % 3600 // 60} minutes {total_time.seconds % 60} seconds")
+    print(f"Total travel time = {format_timedelta(total_time)}")
 
     # display mean travel time
     mean_time = travel_time.mean()
-    print(f"Mean travel time = {mean_time.days} days",
-    f"{mean_time.seconds // 3600} hours {mean_time.seconds % 3600 // 60} minutes {mean_time.seconds % 60} seconds")
+    print(f"Mean travel time = {format_timedelta(mean_time)}")
 
     print(f"\nThis took {time.time() - start_time:.5f} seconds.")
     print('-'*40)
 
+def format_timedelta(td):
+    """Formats timedelta into days/hours/minutes/second."""
+    
+    return (f"{td.days} days, {td.seconds // 3600} hours, "
+            f"{td.seconds % 3600 // 60} minutes, {td.seconds % 60} seconds")
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
