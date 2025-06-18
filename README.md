@@ -20,6 +20,14 @@ Key _statistics_ include:
 - `bikeshare.py` (Main script)
 - `.gitignore` (Excludes the .csv data files)
 
+### Installation
+1. Clone repo:
+`git clone https://github.com/Rand-Shalabi/us-bikeshare-data-explorer`
+2. Install dependencies:
+`pip install pandas numpy`
+3. run:
+`python3 bikeshare.py`
+
 ### License  
 MIT License 
 
