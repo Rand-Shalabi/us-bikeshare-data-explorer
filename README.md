@@ -28,6 +28,10 @@ Key _statistics_ include:
 3. run:
 `python3 bikeshare.py`
 
+### Credits
+- **Udacity**: Provided the project framework and initial dataset.  
+- **Pandas & NumPy**: Used for data analysis ([Pandas Docs](https://pandas.pydata.org/docs/), [NumPy Docs](https://numpy.org/doc/)).
+
 ### License  
 MIT License 
 
