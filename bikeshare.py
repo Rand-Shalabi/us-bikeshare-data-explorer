@@ -163,19 +163,18 @@ def user_stats(df):
 def display_data(df):
     index = 0
     while True:
-        display = input("Would you like to display 5 rows of raw data? Please type yes or no.\n").strip().lower()
+        display = input("Would you like to display 5 rows of raw data? Please type 'yes' or 'no'.\n").strip().lower()
         if display in ['yes', 'yeah', 'y', 'yea', 'yep']:
             if index >= len(df):
                 print("No more data to display.\n")
                 break
             else:
-                print(f"\n{df.iloc[index: index + 5]}")
-                print('-' * 120)
+                print(f"\n{df.iloc[index: index + 5]}\n{'-' * 120}")
                 index += 5
         elif display in ['no', 'nah', 'n', 'nope']:
             break
         else:
-            print("Invalid input")
+            print("Invalid input. Please type 'yes' or 'no'.")
 
 
 def main():
